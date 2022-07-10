@@ -233,74 +233,38 @@ class gameManager{
             int player1Y = player1 -> getY();
             int player2Y = player2 -> getY();
             
-            
-            # ifdef _WIN32 
-            
-                if(_kbhit){
-                    char current = _getch();
+            if(_kbhit){
+                char current = _getch();
 
-                    if(ball->getDir()==STOP){
-                        ball->randomDirection();
-                    }
-                    if(current==up1){
-                        if(player1Y>0){
-                            player1->moveUp();
-                        }
-                    }
-                    if(current==up2){
-                        if(player2Y>0){
-                            player2->moveUp();
-                        }
-                    }
-                    if(current==down1){
-                        if(player1Y+4 <height){
-                            player1->moveDown();
-                        }
-                    }
-                    if(current==down2){
-                        if(player2Y +4 <height){
-                            player2->moveDown();
-                        }
-                    }
-                    
-                    if(current=='q'){
-                        quit = 1;
+                if(ball->getDir()==STOP){
+                    ball->randomDirection();
+                }
+                if(current==up1){
+                    if(player1Y>0){
+                        player1->moveUp();
                     }
                 }
-            #else
-            # include <ncurses.h>
-                if(keypad(stdscr, TRUE)){
-                    char current = getch();
-
-                    if(ball->getDir()==STOP){
-                        ball->randomDirection();
-                    }
-                    if(current==up1){
-                        if(player1Y>0){
-                            player1->moveUp();
-                        }
-                    }
-                    if(current==up2){
-                        if(player2Y>0){
-                            player2->moveUp();
-                        }
-                    }
-                    if(current==down1){
-                        if(player1Y+4 <height){
-                            player1->moveDown();
-                        }
-                    }
-                    if(current==down2){
-                        if(player2Y +4 <height){
-                            player2->moveDown();
-                        }
-                    }
-                    
-                    if(current=='q'){
-                        quit = 1;
+                if(current==up2){
+                    if(player2Y>0){
+                        player2->moveUp();
                     }
                 }
-            #endif
+                if(current==down1){
+                    if(player1Y+4 <height){
+                        player1->moveDown();
+                    }
+                }
+                if(current==down2){
+                    if(player2Y +4 <height){
+                        player2->moveDown();
+                    }
+                }
+                    
+                if(current=='q'){
+                    quit = 1;
+                }
+            }
+            
                 
         }
 

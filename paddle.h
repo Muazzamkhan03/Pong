@@ -9,10 +9,10 @@ class Paddle{
         Paddle();
         Paddle(int, int);
         void reset();
-        inline int getX();
-        inline int getY();
-        inline void moveUp();
-        inline void moveDown();
+        int getX();
+        int getY();
+        void moveUp();
+        void moveDown();
 };
 
 #endif

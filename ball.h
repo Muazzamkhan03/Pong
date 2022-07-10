@@ -15,9 +15,9 @@ class Ball{
         void reset();
         void changeDir(Dir);
         void randomDirection();
-        inline int getX();
-        inline int getY();
-        inline Dir getDir();
+        int getX();
+        int getY();
+        Dir getDir();
         void Move();
         
 };

@@ -17,18 +17,18 @@ void Paddle::reset(){
     y = origY;
 }
 
-inline int Paddle::getX(){ 
+int Paddle::getX(){ 
     return x;
 }
 
-inline int Paddle::getY(){ 
+int Paddle::getY(){ 
     return y;
 }
 
-inline void Paddle::moveUp(){
+void Paddle::moveUp(){
     y--; 
 }
 
-inline void Paddle::moveDown(){
+void Paddle::moveDown(){
     y++; 
 }

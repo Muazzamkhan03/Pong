@@ -17,11 +17,11 @@ void Paddle::reset(){
     y = origY;
 }
 
-int Paddle::getX(){ 
+inline int Paddle::getX(){ 
     return x;
 }
 
-int Paddle::getY(){ 
+inline int Paddle::getY(){ 
     return y;
 }
 

@@ -25,15 +25,15 @@ void Ball::randomDirection(){
     direction = (Dir)n;
 }
 
-int Ball::getX(){ 
+inline int Ball::getX(){ 
     return x; 
 }
 
-int Ball::getY(){ 
+inline int Ball::getY(){ 
     return y; 
 }
 
-Dir Ball::getDir(){ 
+inline Dir Ball::getDir(){ 
     return direction; 
 }
 
